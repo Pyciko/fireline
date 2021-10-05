@@ -1,0 +1,41 @@
+#nav-bar {
+    background-color: transparent !important;
+    margin-right: 70vw !important;
+    margin-top: -36px !important;
+}
+
+#TabsToolbar {
+    margin-left: 30vw !important;
+}
+
+#back-button {
+    padding-left: 4px !important;
+    padding-right: 0px !important;
+}
+
+#downloads-button,
+#forward-button,
+#PanelUI-menu-button {
+    padding: 0px !important;
+}
+
+#urlbar-container {
+    min-width: auto !important;
+}
+
+.titlebar-spacer[type="pre-tabs"], 
+#reader-mode-button,
+#eme-notification-icon, /*DRM*/
+#urlbar-go-button,
+#tracking-protection-icon-container,
+#star-button-box,
+#urlbar-input::placeholder, /*Search with Google tooltip*/
+.urlbarView-favicon, /*website suggestions favicons*/
+.extensionPage {
+    display: none !important;
+    opacity: 0.0 !important; 
+}
+
+.urlbarView-url {
+    padding-left: 0px !important;
+}
