@@ -1,2 +1,2 @@
 # fireline
- Firefox one line interface
+ Firefox one line interface (via userChrome.css)
