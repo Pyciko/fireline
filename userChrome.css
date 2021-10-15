@@ -1,26 +1,40 @@
 #nav-bar {
-    background-color: transparent !important;
+    z-index: 99 !important;
+    background-color: var(--toolbar-field-background-color) !important;
+    margin-top: calc(0px - var(--tab-min-height) - 7px) !important;
+    
     margin-right: 70vw !important;
-    margin-top: -36px !important;
+    transition-duration: 0.1s !important;
+    transition-property: margin-right !important;
+    transition-timing-function: ease-in-out !important;
 }
 
-#TabsToolbar {
-    margin-left: 30vw !important;
+#nav-bar:hover{
+    margin-right: 180px !important; /*137px ?*/
+
+    transition-duration: 0.2s !important;
+    transition-property: margin-right !important;
+    transition-delay: 0.5s !important;
+    transition-timing-function: ease-in-out !important;
 }
 
-#back-button {
-    padding-left: 4px !important;
-    padding-right: 0px !important;
+#TabsToolbar {margin-left: 30vw !important;} /*#titlebar ?*/
+
+#PanelUI-button { 
+    padding-left: 4px;
+    -moz-box-ordinal-group: 0 !important; 
 }
 
 #downloads-button,
 #forward-button,
-#PanelUI-menu-button {
-    padding: 0px !important;
-}
+#back-button,
+#PanelUI-menu-button {padding: 0px !important;}
 
-#urlbar-container {
-    min-width: auto !important;
+#urlbar-container {min-width: auto !important;}
+
+#urlbar-background {
+    background-color: var(--toolbar-field-focus-background-color) !important;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.333) !important;
 }
 
 .titlebar-spacer[type="pre-tabs"], 
@@ -31,11 +45,12 @@
 #star-button-box,
 #urlbar-input::placeholder, /*Search with Google tooltip*/
 .urlbarView-favicon, /*website suggestions favicons*/
+#identity-box *:not(#page-proxy-favicon), /*Connection secure icon*/
 .extensionPage {
     display: none !important;
     opacity: 0.0 !important; 
 }
 
-.urlbarView-url {
-    padding-left: 0px !important;
-}
+.urlbarView-url {padding-left: 0px !important;}
+
+#PersonalToolbar {height: var(--tab-min-height) !important;}
