@@ -1,17 +1,14 @@
 #nav-bar {
-    /* z-index: 100 !important; */
-    pointer-events: none !important;
     background-color: transparent !important;
     margin-top: calc(0px - var(--tab-min-height) - 8px) !important;
 }
 
 #urlbar {
-    background-color: var(--toolbar-field-background-color) !important;
+    background-color: var(--toolbar-field-focus-background-color) !important;
     border-radius: 8px !important;
 }
 
 #urlbar-container {
-    pointer-events: all !important;
     min-width: auto !important;
     z-index: 100 !important;
 
@@ -22,15 +19,18 @@
 }
 
 #urlbar-container:hover {
-    margin-right: 180px !important;
+    margin-right: 130px !important;
     transition-duration: 0.2s !important;
     transition-delay: 0.5s !important;
 }
 
+#TabsToolbar {
+    position: relative !important;
+    z-index: 50 !important;
+    margin-left: 30vw !important;
+}
+
 .urlbarView-url {padding-left: 0px !important;}
-
-#TabsToolbar {margin-left: 30vw !important;} /*#titlebar ?*/
-
 #PanelUI-button { 
     padding-left: 4px;
     -moz-box-ordinal-group: 0 !important; 
@@ -41,7 +41,11 @@
 #back-button,
 #PanelUI-menu-button {
     padding: 0px !important;
-    pointer-events: all !important;
+}
+
+#back-button,
+#forward-button {
+    display: inline !important;
 }
 
 #urlbar-background {
@@ -50,16 +54,27 @@
     height: var(--tab-min-height) !important;
 }
 
-.titlebar-spacer[type="pre-tabs"], 
-#reader-mode-button,
-#eme-notification-icon, /*DRM*/
-#urlbar-go-button,
-#tracking-protection-icon-container,
-#star-button-box,
-#urlbar-input::placeholder, /*Search with Google tooltip*/
-.urlbarView-favicon, /*website suggestions favicons*/
-#identity-box *:not(#page-proxy-favicon), /*Connection secure icon*/
-.extensionPage {
+.titlebar-button {
+    padding: 0px 0px !important;
+    width: 40px !important;
+}
+
+.titlebar-spacer[type="post-tabs"] {
+    width: 10px !important;
+}
+
+#back-button[disabled="true"],
+#forward-button[disabled="true"],
+.titlebar-spacer[type="pre-tabs"]
+/* #star-button-box */
+/* #reader-mode-button, */
+/* #eme-notification-icon, */
+/* #urlbar-go-button, */
+/* #tracking-protection-icon-container, */
+/* .urlbarView-favicon, */
+/* #identity-box *:not(#page-proxy-favicon), */
+/* .extensionPage { */
+{
     display: none !important;
     opacity: 0.0 !important; 
 }
