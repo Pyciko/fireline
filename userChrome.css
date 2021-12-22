@@ -59,20 +59,21 @@
     width: 40px !important;
 }
 
+.tabbrowser-tab[fadein]:not([pinned]) { max-width: 150px !important; }
+
 .titlebar-spacer[type="post-tabs"] {
     width: 10px !important;
 }
 
 #webrtcIndicator,
+#page-action-buttons,
 #back-button[disabled="true"],
 #forward-button[disabled="true"],
-.titlebar-spacer[type="pre-tabs"]
-/* #star-button-box */
-/* #reader-mode-button, */
-/* #eme-notification-icon, */
-/* #urlbar-go-button, */
-/* #tracking-protection-icon-container, */
-/* .urlbarView-favicon, */
+.titlebar-spacer[type="pre-tabs"],
+#eme-notification-icon,
+#urlbar-go-button,
+#tracking-protection-icon-container,
+.urlbarView-favicon
 /* #identity-box *:not(#page-proxy-favicon), */
 /* .extensionPage { */
 {
